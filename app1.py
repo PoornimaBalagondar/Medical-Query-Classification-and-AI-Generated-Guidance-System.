@@ -25,7 +25,7 @@ def query_llm(prompt: str) -> str:
     API_URL = "https://router.huggingface.co/v1/chat/completions"
     
     headers = {
-        "Authorization": "Bearer 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"
+        "Authorization": "Bearer {os.environ['HF_TOKEN']}"
     }
     
     system_prompt = """You are a medical AI assistant specialized in stroke risk assessment. Your role is to identify stroke-related symptoms, assess urgency, explain risk factors simply, provide recommendations, never diagnose or prescribe, always recommend professional consultation for symptoms, and ask clarifying questions when needed. Respond clearly and empathetically."""
